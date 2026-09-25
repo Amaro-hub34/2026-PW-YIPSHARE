@@ -46,9 +46,11 @@ main {
 }
 
 .logo-titulo {
-    width: 120px;
+    width: 150px;
     height: auto;
-    background-color: #FFFFFF;
+    padding: 8px;
+    border-radius: 12px;
+    object-fit: contain;
 }
 
 .titulo-principal p {
@@ -96,4 +98,37 @@ label {
     font-weight: bold;
     color: #1E4B71;
 }
+.seccion-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
+.tarjeta-producto {
+    background-color: #F2F2F2;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarjeta-producto h3 {
+    color: #1E4B71;
+    font-size: 1.4rem;
+}
+
+.tarjeta-producto p {
+    line-height: 1.5;
+}
+
+.detalles-producto {
+    list-style-type: square;
+    margin-left: 1.5rem;
+    color: #000000;
+}
+
+.detalles-producto li {
+    margin-bottom: 0.3rem;
+}
