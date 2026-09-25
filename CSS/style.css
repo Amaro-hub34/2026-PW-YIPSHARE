@@ -132,3 +132,37 @@ label {
 .detalles-producto li {
     margin-bottom: 0.3rem;
 }
+.seccion-casos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tarjeta-caso {
+    background-color: #F2F2F2;
+    border: 1px solid #DDDDDD;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.tarjeta-caso.proximo {
+    border: 2px solid #1E4B71;
+    background-color: #FFFFFF;
+}
+
+.tarjeta-caso h3 {
+    color: #1E4B71;
+    font-size: 1.4rem;
+}
+
+.tarjeta-caso p {
+    line-height: 1.5;
+}
+
+.metrica {
+    font-weight: bold;
+    color: #1E4B71;
+}
