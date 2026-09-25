@@ -221,3 +221,10 @@ textarea {
 #boton-registrar:hover {
     background-color: #000000;
 }
+footer {
+    background-color: #1E4B71;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
