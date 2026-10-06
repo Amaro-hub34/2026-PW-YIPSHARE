@@ -1,4 +1,3 @@
-
 const patrones = {
     nombre: /^[A-Za-zÁÉÍÓÚÑáéíóúñÜü\s]{2,60}$/,
     mensaje: /^[\s\S]{10,500}$/
