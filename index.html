@@ -1,22 +1,51 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="logo_yipshare_icono.png">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YipShare</title>
+    <link rel="icon" type="image/png" href="./img/logo_yipshare_icono.png">
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body>
-<nav class="bg-blue-600">
-    <ul>
-        <li><a href="/">Nuestros productos</a></li>
-        <li><a href="/servicios">Casos de Éxito</a></li>
-        <li><a href="/contacto">Conocenos</a></li>
-        <li><a href="/contactanos">Contáctanos</a> </li>
-    </ul>
-</nav>
-    <h1>Hello World!</h1>
+
+<body class="m-0 min-h-screen flex flex-col bg-gradient-to-b from-[#24557f] to-[#3b8bd9] text-white font-sans">
+
+<header class="bg-[#1e4a73]/80">
+    <nav class="flex flex-wrap items-center justify-between gap-4 px-4 py-3 md:px-6">
+
+        <div class="flex items-center gap-6 md:gap-8">
+            <a href="#" aria-label="YipShare - inicio">
+                <img src="./img/logo_yipshare_icono.png" alt="Logo de YipShare" class="h-9 w-auto">
+            </a>
+
+            <ul class="hidden md:flex items-center gap-8 text-sm font-semibold list-none m-0 p-0">
+                <li><a href="#productos" class="text-white no-underline hover:underline">Nuestros Productos</a></li>
+                <li><a href="#casos" class="text-white no-underline hover:underline">Casos de Éxito</a></li>
+                <li><a href="#nosotros" class="text-white no-underline hover:underline">Conócenos</a></li>
+                <li><a href="#contacto" class="text-white no-underline hover:underline">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="flex items-center gap-3">
+            <a href="#" class="w-28 rounded-full bg-[#2a6aa8] py-0.5 text-center text-xs text-white no-underline hover:bg-[#3578ba]">
+                Iniciar Sesión
+            </a>
+            <a href="#" class="w-28 rounded-full bg-white py-0.5 text-center text-xs text-[#1e2b45] no-underline hover:bg-gray-100">
+                Registrarse
+            </a>
+        </div>
+
+    </nav>
+</header>
+
+<main class="flex flex-1 flex-col items-center justify-center px-4 py-24 text-center">
+    <h1 class="m-0 text-4xl font-bold md:text-6xl">Bienvenido a YipShare</h1>
+    <p class="mt-2 text-xl font-semibold md:text-2xl">El valor está en el uso no en la posesión</p>
+
+    <a href="#" class="mt-10 rounded-lg bg-[#1e2b45] px-16 py-2 text-xl text-white no-underline hover:bg-[#263756]">
+        ¡Empezar!
+    </a>
+</main>
 
 </body>
 </html>
