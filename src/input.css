@@ -1,1 +1,52 @@
 @import "tailwindcss";
+@keyframes caer {
+    0%   { transform: translateY(-15vh) rotate(0deg); opacity: 0; }
+    10%  { opacity: var(--op); }
+    90%  { opacity: var(--op); }
+    100% { transform: translateY(115vh) rotate(var(--giro)); opacity: 0; }
+}
+
+.casa {
+    position: absolute;
+    top: 0;
+    color: white;
+    animation: caer linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .casa { animation: none; opacity: 0.1; }
+}
+@property --op {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0.2;
+}
+
+@property --giro {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 180deg;
+}
+
+@keyframes caer {
+    0%   { transform: translateY(-15vh) translateX(0) rotate(0deg); opacity: 0; }
+    10%  { opacity: var(--op, 0.2); }
+    50%  { transform: translateY(50vh) translateX(20px) rotate(calc(var(--giro, 180deg) / 2)); }
+    90%  { opacity: var(--op, 0.2); }
+    100% { transform: translateY(115vh) translateX(0) rotate(var(--giro, 180deg)); opacity: 0; }
+}
+
+.casa {
+    position: absolute;
+    top: 0;
+    color: white;
+    animation: caer linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .casa {
+        animation: none;
+        opacity: 0.1;
+        top: 20vh;
+    }
+}

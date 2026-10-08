@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body class="m-0 min-h-screen flex flex-col bg-gradient-to-b from-[#24557f] to-[#3b8bd9] text-white font-sans">
+<body class="relative m-0 min-h-screen flex flex-col bg-linear-to-b from-[#24557f] to-[#3b8bd9] text-white font-sans">
 
-<header class="bg-[#1e4a73]/80">
+<div id="lluvia-casas" aria-hidden="true"
+     class="pointer-events-none fixed inset-0 overflow-hidden"></div>
+
+<header class="relative z-10 bg-[#1e4a73]/80">
     <nav class="flex flex-wrap items-center justify-between gap-4 px-4 py-3 md:px-6">
 
         <div class="flex items-center gap-6 md:gap-8">
@@ -19,15 +22,12 @@
             </a>
 
             <ul class="hidden md:flex items-center gap-8 text-sm font-semibold list-none m-0 p-0">
-                <li><a href="./LandinPage/ourProducts.html" class="text-white no-underline hover:underline">Nuestros Productos</a></li>
-                <li><a href="./LandinPage/ourSuccesses.html" class="text-white no-underline hover:underline">Casos de Éxito</a></li>
-                <li><a href="./LandinPage/aboutUs.html" class="text-white no-underline hover:underline">Conócenos</a></li>
                 <li><a href="./LandinPage/contact.html" class="text-white no-underline hover:underline">Contáctanos</a></li>
             </ul>
         </div>
 
         <div class="flex items-center gap-3">
-            <a href="#" class="w-32 rounded-full bg-[#2a6aa8] py-1 text-center text-sm font-bold text-white transition hover:bg-[#3b86cc]">
+            <a href="./YipShare/login.html" class="w-32 rounded-full bg-[#2a6aa8] py-1 text-center text-sm font-bold text-white transition hover:bg-[#3b86cc]">
                 Iniciar Sesión
             </a>
             <a href="#" class="w-32 rounded-full bg-white py-1 text-center text-sm font-bold text-[#1e4a73] transition hover:bg-sky-200">
@@ -38,15 +38,41 @@
     </nav>
 </header>
 
-<main class="flex flex-1 flex-col items-center justify-center px-4 py-24 text-center">
+<main class="relative z-10 flex flex-1 flex-col items-center justify-center px-4 py-24 text-center">
     <h1 class="m-0 text-4xl font-bold md:text-6xl">Bienvenido a YipShare</h1>
     <p class="mt-2 text-xl font-semibold md:text-2xl">El valor está en el uso no en la posesión</p>
 
-    <a href="#" class="mt-10 rounded-lg bg-[#1e2b45] px-16 py-2 text-xl text-white no-underline hover:bg-[#263756]">
+    <a href="./YipShare/login.html" class="mt-10 rounded-lg bg-[#1e2b45] px-16 py-2 text-xl text-white no-underline hover:bg-[#263756]">
         ¡Empezar!
     </a>
 </main>
-<script src="./LandinPage/js/validaciones_landinPage.js"></script>
+
+<script>
+    (function () {
+        const capa = document.getElementById('lluvia-casas');
+
+        const casaHTML = `<img src="./img/logo_yipshare_icono.png" alt="" class="h-full w-full object-contain">`;
+
+
+        const CANTIDAD = 18;
+
+        for (let i = 0; i < CANTIDAD; i++) {
+            const casa = document.createElement('div');
+            casa.className = 'casa';
+            casa.innerHTML = casaHTML;
+
+            const tamano = 20 + Math.random() * 40;
+            casa.style.left = Math.random() * 100 + 'vw';
+            casa.style.width = casa.style.height = tamano + 'px';
+            casa.style.animationDuration = (8 + Math.random() * 10) + 's';
+            casa.style.animationDelay = (-Math.random() * 15) + 's';
+            casa.style.setProperty('--op', (0.08 + Math.random() * 0.22).toFixed(2));
+            casa.style.setProperty('--giro', (Math.random() * 360 - 180) + 'deg');
+
+            capa.appendChild(casa);
+        }
+    })();
+</script>
 
 </body>
 </html>
