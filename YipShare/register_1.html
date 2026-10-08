@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - YipShare</title>
+    <title>Crear Cuenta - YipShare</title>
     <link rel="icon" type="image/png" href="../img/logo_yipshare_icono.png">
     <link rel="stylesheet" href="../src/output.css">
 </head>
@@ -39,7 +39,7 @@
         <span id="error-apellido-materno" class="mt-1 block text-sm text-red-600"></span>
     </div>
     <div class="mt-4">
-        <label for="name" class="sr-only">Apellido Materno</label>
+        <label for="name" class="sr-only">Nombre</label>
         <div class="relative">
             <input type="text" id="name" name="name" placeholder="Nombre" required autocomplete="nombre"
                    class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-3 text-lg text-slate-700 focus:outline-2 focus:outline-[#2a6aa8]">
@@ -47,11 +47,57 @@
         <span id="error-name" class="mt-1 block text-sm text-red-600"></span>
     </div>
 
+    <div class="mt-6">
+        <label for="usuario" class="sr-only">Usuario</label>
+        <div class="relative">
+            <svg class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="8" r="4"/>
+                <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>
+            </svg>
+            <input type="text" id="usuario" name="usuario" placeholder="Usuario" required autocomplete="username"
+                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-3 text-lg text-slate-700 focus:outline-2 focus:outline-[#2a6aa8]">
+        </div>
+        <span id="error-usuario" class="mt-1 block min-h-5 text-sm text-red-600"></span>
+    </div>
+
+    <div class="mt-2">
+        <label for="contrasena" class="sr-only">Contraseña</label>
+        <div class="relative">
+            <svg class="pointer-events-none absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"
+                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="4" y="11" width="16" height="10" rx="2"/>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+            </svg>
+
+            <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required autocomplete="current-password"
+                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-11 text-lg text-slate-700 focus:outline-2 focus:outline-[#2a6aa8]">
+
+            <button type="button" id="toggle-contrasena" aria-label="Mostrar contraseña" aria-pressed="false"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-slate-500 hover:text-[#2a6aa8]">
+                <svg id="ojo-abierto" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg id="ojo-cerrado" class="hidden h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M2 12s3.6-7 10-7c2 0 3.8.7 5.3 1.7M22 12s-3.6 7-10 7c-2 0-3.8-.7-5.3-1.7"/>
+                    <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/>
+                    <path d="M3 3l18 18"/>
+                </svg>
+            </button>
+        </div>
+        <span id="error-contrasena" class="mt-1 block min-h-5 text-sm text-red-600"></span>
+    </div>
+
     <div class="mt-2 flex justify-center">
         <a href="./register_2.html" class="w-3/4 mt-6">
             <button type="button" id="boton-entrar"
                     class="w-full cursor-pointer rounded-lg bg-[#1e2b45] py-2 text-white shadow-md transition hover:bg-[#2f4268]">
-                Siguiente
+                Crear Cuenta
             </button>
         </a>
     </div>
