@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión - YipShare</title>
+    <title>Crear Cuenta - YipShare</title>
     <link rel="icon" type="image/png" href="../img/logo_yipshare_icono.png">
     <link rel="stylesheet" href="../src/output.css">
 </head>
@@ -12,14 +12,14 @@
 <body class="m-0 min-h-screen flex flex-col items-center justify-center bg-cover bg-center px-4 py-10 font-sans text-[#1e2b45]"
       style="background-image: url('../img/img.png'), linear-gradient(to bottom, #1e4a73, #2f78b8);">
 
-<a href="../index.html" aria-label="YipShare - inicio" class="mb-4">
+<a href="./register_1.html" aria-label="YipShare - inicio" class="mb-4">
     <img src="../img/logo_yipshare_icono.png" alt="Logo de YipShare" class="h-28 w-auto md:h-35">
 </a>
 
 <form id="form-login" novalidate
       class="w-full max-w-md rounded-3xl bg-white px-8 pt-6 pb-4 shadow-xl">
 
-    <h1 class="m-0 text-center text-3xl font-black uppercase tracking-wide">Iniciar Sesión</h1>
+    <h1 class="m-0 text-center text-3xl font-black uppercase tracking-wide">Crear Cuenta</h1>
 
     <div class="mt-6">
         <label for="usuario" class="sr-only">Usuario</label>
@@ -31,7 +31,7 @@
                 <path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/>
             </svg>
             <input type="text" id="usuario" name="usuario" placeholder="Usuario" required autocomplete="username"
-                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-3 text-lg text-slate-700 placeholder:text-slate-500 focus:outline-2 focus:outline-[#2a6aa8]">
+                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-3 text-lg text-slate-700 focus:outline-2 focus:outline-[#2a6aa8]">
         </div>
         <span id="error-usuario" class="mt-1 block min-h-5 text-sm text-red-600"></span>
     </div>
@@ -47,7 +47,7 @@
             </svg>
 
             <input type="password" id="contrasena" name="contrasena" placeholder="Contraseña" required autocomplete="current-password"
-                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-11 text-lg text-slate-700 placeholder:text-slate-500 focus:outline-2 focus:outline-[#2a6aa8]">
+                   class="w-full rounded-lg border border-slate-600 bg-[#eeeeee] py-2 pl-11 pr-11 text-lg text-slate-700 focus:outline-2 focus:outline-[#2a6aa8]">
 
             <button type="button" id="toggle-contrasena" aria-label="Mostrar contraseña" aria-pressed="false"
                     class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-slate-500 hover:text-[#2a6aa8]">
@@ -69,20 +69,18 @@
 
     <div class="mt-2 flex justify-center">
         <button type="submit" id="boton-entrar"
-                class="w-3/4 cursor-pointer rounded-lg bg-[#1e2b45] py-2 text-white shadow-md transition hover:bg-[#2f4268]">
-            Entrar
+                class="w-3/4 cursor-pointer rounded-lg mt-6  bg-[#1e2b45] py-2 text-white shadow-md transition hover:bg-[#2f4268]">
+            Crear Cuenta
         </button>
     </div>
 
     <p id="mensaje-exito" class="mt-2 min-h-5 text-center text-sm font-semibold text-green-700"></p>
 
     <p class="mt-4 text-center text-xs text-slate-600">
-        ¿No tienes cuenta?
-        <a href="./register_1.html" class="ml-1 font-bold text-[#2a6aa8] hover:underline">Regístrate</a>
+        Conoce Nuestros terminos y condiciones y nuestra política de privacidad. Al registrarte, aceptas nuestros términos y condiciones y nuestra política de privacidad.
+        <a href="#" class="ml-1 font-bold text-[#2a6aa8] hover:underline">Conocelos</a>
     </p>
-    <div class="mt-6">
-        <a href="#" class="text-[10px] text-slate-500 hover:underline">Admin</a>
-    </div>
+
 
 </form>
 <script src="../js/visual.js"></script>
